@@ -1,0 +1,11 @@
+{
+	"name": "Testecake",
+	"version": "0.1",
+	"title": "Testcake",
+	"author": "madurban ++ drbert",
+	"description": "Testcake topping",
+	"homepage": "http://127.0.0.1",
+	"contact": "http://127.0.0.1",
+	"factorio_version":"0.15",
+	"dependencies": ["base >= 0.15.0"]
+}
