@@ -1,5 +1,6 @@
-data:extend({
-  
+data:extend(
+{
+	
 	---- UraniumAxe
 	{
 		type = "mining-tool",
@@ -15,21 +16,17 @@ data:extend({
 			target_effects =
 			{
 				type = "damage",
-				damage = { amount = 10 , type = "physical"}
+				damage = { amount = 20 , type = "physical"}
 			}
 		  }
 		},
-		durability = 101010,
+		durability = 10000,
 		subgroup = "tool",
 		order = "a[mining]-b[steel-axe]",
 		speed = 10,
-		stack_size = 10
+		stack_size = 20
 	},	
   
-  })
-  
-  data:extend({
-
   {
     type = "recipe",
     name = "uranium-axe",
@@ -43,4 +40,5 @@ data:extend({
     requester_paste_multiplier = 1
   },  
   
- })
+ }
+ )
