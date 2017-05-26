@@ -29,21 +29,18 @@ local function add_techno_level(name,n1,n,add_ingrs)
 		techno.name = name
 	end
 	
-	if add_ingrs ~= -1 then
-		if n+add_ingrs >= 1 then
+	if add_ingrs then
+		if n >= 1 then
 			table.insert(techno.unit.ingredients,{"science-pack-1", 1})
 		end
-		if n+add_ingrs >= 2 then
+		if n >= 2 then
 			table.insert(techno.unit.ingredients,{"science-pack-2", 1})
 		end
-		if n+add_ingrs >= 3 then
+		if n >= 3 then
 			table.insert(techno.unit.ingredients,{"science-pack-3", 1})
 		end
-		if n+add_ingrs >= 4 then
-			table.insert(techno.unit.ingredients,{"production-science-pack", 1})
-		end
-		if n+add_ingrs >= 5 then
-			table.insert(techno.unit.ingredients,{"high-tech-science-pack", 1})
+		if n >= 4 then
+			table.insert(techno.unit.ingredients,{"alien-science-pack", 1})
 		end
 	end
 	
@@ -58,6 +55,7 @@ end
 
 ---------------------------------------------------------------------
 -- inventory
+--Edited by drbert
 
 func_techno = function(n,inc)
 	return {
@@ -67,7 +65,9 @@ func_techno = function(n,inc)
 		{
 			{
 				type = "character-inventory-slots-bonus",
-				modifier = (n < 4) and 30 or 20
+				-- modifier = (n < 4) and 30 or 20
+				--Edited by drbert
+				modifier = (n < 4) and 20 or 10
 				-- modifier = 20
 			}
 		},
@@ -81,7 +81,7 @@ func_techno = function(n,inc)
 	}
 end
 
-add_technos("inventory-size",1,5,0)
+add_technos("inventory-size",1,5,true)
 
 ---------------------------------------------------------------------
 -- toolbelt
@@ -100,7 +100,7 @@ func_techno = function(n,inc)
 		},
 		unit =
 		{
-			count = 200+50*inc,
+			count = 300+100*inc,
 			ingredients = {},
 			time = 35+5*inc
 		},
@@ -108,11 +108,12 @@ func_techno = function(n,inc)
 	}
 end
 
-add_technos("toolbelt",2,3,1)
+add_technos("toolbelt",2,3,true)
+-- Edited by drbert (original: add_technos("toolbelt",2,3,true))
 
 ---------------------------------------------------------------------
 -- pickstick
-
+-- Edited by drbert (original modifier 12*n)
 func_techno = function(n,inc)
 	return {
 		icon = "__BigBags__/graphics/pickstick.png",
@@ -121,23 +122,23 @@ func_techno = function(n,inc)
 		{
 			{
 				type = "character-build-distance",
-				modifier = 12*n
+				modifier = 2*n
 			},
 			{
 				type = "character-item-drop-distance",
-				modifier = 12*n
+				modifier = 2*n
 			},
 			{
 				type = "character-reach-distance",
-				modifier = 12*n
+				modifier = 2*n
 			},
 			-- {
 				-- type = "character-item-pickup-distance",
-				-- modifier = 12*n
+				-- modifier = 6*n
 			-- },
 			{
 				type = "character-resource-reach-distance",
-				modifier = 12*n
+				modifier = 2*n
 			},
 			{
 				type = "character-loot-pickup-distance",
@@ -154,7 +155,8 @@ func_techno = function(n,inc)
 	}
 end
 
-add_technos("pickstick",1,5,0)
+add_technos("pickstick",1,5,true)
+
 
 ---------------------------------------------------------------------
 -- character-logistic-slots
@@ -169,7 +171,7 @@ func_techno = function(n,inc)
 		{
 			{
 				type = "character-logistic-slots",
-				modifier = 6,
+				modifier = 5,
 			}
 		},
 		unit =
@@ -180,7 +182,7 @@ func_techno = function(n,inc)
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
-				{"production-science-pack", 1},
+				{"alien-science-pack", 1},
 			},
 			time = 30 + 5*inc,
 		},
@@ -188,7 +190,7 @@ func_techno = function(n,inc)
 	}
 end
 
-add_technos("character-logistic-slots",6,9,-1)
+add_technos("character-logistic-slots",6,9,false)
 
 ---------------------------------------------------------------------
 -- character-logistic-trash-slots
@@ -200,7 +202,7 @@ func_techno = function(n,inc)
 		{
 			{
 				type = "character-logistic-trash-slots",
-				modifier = 6
+				modifier = 5
 			}
 		},
 		prerequisites = {"character-logistic-trash-slots-2"},
@@ -214,7 +216,7 @@ func_techno = function(n,inc)
 	}
 end
 
-add_technos("character-logistic-trash-slots",3,4,0)
+add_technos("character-logistic-trash-slots",3,4,true)
 
 ---------------------------------------------------------------------
 -- worker-robots-storage
@@ -234,8 +236,7 @@ func_techno = function(n,inc)
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
-				{"production-science-pack", 1},
-				{"high-tech-science-pack", 1},
+				{"alien-science-pack", 1},
 			},
 			time = 60
 		},
@@ -243,7 +244,7 @@ func_techno = function(n,inc)
 	}
 end
 
-add_technos("worker-robots-storage",4,10,-1)
+add_technos("worker-robots-storage",4,8,false)
 
 ---------------------------------------------------------------------
 -- worker-robots-speed
@@ -263,6 +264,7 @@ func_techno = function(n,inc)
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
+				{"alien-science-pack", 1},
 			},
 			time = 60,
 		},
@@ -270,5 +272,5 @@ func_techno = function(n,inc)
 	}
 end
 
--- add_technos("worker-robots-speed",6,8,-1)
+add_technos("worker-robots-speed",6,8,false)
 
