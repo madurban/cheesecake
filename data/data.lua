@@ -3,4 +3,3 @@
 
 --- Items
 require("prototypes.UraniumAxe.item")
-require("prototypes.UraniumAxe.recipe")
