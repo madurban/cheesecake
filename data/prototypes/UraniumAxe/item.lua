@@ -1,5 +1,3 @@
-
-
 data:extend({
   
 	---- UraniumAxe
@@ -17,15 +15,15 @@ data:extend({
 			target_effects =
 			{
 				type = "damage",
-				damage = { amount = 20 , type = "physical"}
+				damage = { amount = 10 , type = "physical"}
 			}
 		  }
 		},
-		durability = 10000,
+		durability = 101010,
 		subgroup = "tool",
 		order = "a[mining]-b[steel-axe]",
 		speed = 10,
-		stack_size = 20
+		stack_size = 10
 	},	
   
   })
