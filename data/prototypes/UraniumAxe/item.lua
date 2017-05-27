@@ -26,9 +26,6 @@ data:extend({
 		stack_size = 10
 	},	
   
-  })
-  
-  data:extend({
 
   {
     type = "recipe",
