@@ -3,7 +3,7 @@ data:extend({
 	---- Graviton Gloves
 	
 	{
-		type = "generator-equipment",
+		type = "movement-bonus-equipment",
 		name = "graviton-gloves-equipment",
 		sprite = 
 		{
@@ -23,17 +23,20 @@ data:extend({
 		type = "electric",
 		buffer_capacity = "120kJ",
 		input_flow_limit = "240kW",
-		usage_priority = "primary-input"
+		usage_priority = "secondary-input"
 		},
-		power = "750kW",
+		energy_consumption = "200kW",
+		movement_bonus = 0.0,			
 		categories = {"armor"}
-		
 	},	
+	
+	--- Item Definition
 	
 	{
 		type = "item",
 		name = "graviton-gloves-equipment",
 		icon = "__Cheesecake__/graphics/icons/graviton-gloves.png",
+		placed_as_equipment_result = "graviton-gloves-equipment",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "equipment",
 		order = "f[nightvision]-a[graviton-gloves-equipment]",
