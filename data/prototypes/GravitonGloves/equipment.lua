@@ -3,7 +3,7 @@ data:extend({
 	---- Graviton Gloves
 	
 	{
-		type = "graviton-gloves-equipment",
+		type = "generator-equipment",
 		name = "graviton-gloves-equipment",
 		sprite = 
 		{
@@ -25,6 +25,7 @@ data:extend({
 		input_flow_limit = "240kW",
 		usage_priority = "primary-input"
 		},
+		power = "750kW",
 		categories = {"armor"}
 		
 	},	
