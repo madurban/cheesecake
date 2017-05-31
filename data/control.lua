@@ -5,5 +5,8 @@ local player = game.players[event.player_index]
 		then
 			player.print(character_build_distance_bonus)
 			player.character_build_distance_bonus = player.character_build_distance_bonus + 4
+			player.character_reach_distance_bonus = player.character_reach_distance_bonus + 4
+			player.character_item_drop_distance_bonus = player.character_item_drop_distance_bonus + 4
+			player.character_resource_reach_distance_bonus = player.character_resource_reach_distance_bonus + 2
 	end
 end)
