@@ -26,7 +26,11 @@ data:extend({
 		speed = 10,
 		stack_size = 10,
 		reach_distance_bonus = 20,
-		build_distance_bonus = 20
+		build_distance_bonus = 20,
+		item_drop_distance_bonus = 20,
+		item_pickup_distance_bonus = 20,
+		loot_pickup_distance_bonus = 20,
+		resource_reach_distance_bonus = 20
 	},	
   
 
