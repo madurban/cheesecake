@@ -1,3 +1,5 @@
+
+--[[
 script.on_event(defines.events.on_player_placed_equipment, function(event)
 local player = game.players[event.player_index]
 	player.print(event.equipment.name)	
@@ -23,3 +25,5 @@ local player = game.players[event.player_index]
 			player.character_resource_reach_distance_bonus = player.character_resource_reach_distance_bonus - 2
 	end
 end)
+
+--]]

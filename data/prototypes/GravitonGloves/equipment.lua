@@ -42,8 +42,9 @@ data:extend({
 		subgroup = "equipment",
 		order = "f[nightvision]-a[graviton-gloves-equipment]",
 		stack_size = 5,
-		reach_distance_bonus = 4,
-		resource_reach_distance_bonus = 41
+		reach_distance_bonus = 10,
+		resource_reach_distance_bonus = 10,
+		build_distance_bonus = 10		
 	},
 	
 	
