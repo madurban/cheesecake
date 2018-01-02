@@ -41,7 +41,9 @@ data:extend({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "equipment",
 		order = "f[nightvision]-a[graviton-gloves-equipment]",
-		stack_size = 5
+		stack_size = 5,
+		reach_distance_bonus = 4,
+		resource_reach_distance_bonus = 41
 	},
 	
 	
