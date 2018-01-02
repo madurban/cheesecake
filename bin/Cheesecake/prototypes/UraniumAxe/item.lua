@@ -24,8 +24,8 @@ data:extend({
 		subgroup = "tool",
 		order = "a[mining]-b[steel-axe]",
 		speed = 10,
-		stack_size = 10,
-		reach_distance_bonus = 20,
+		stack_size = 10
+		reach_distance_bonus = 20
 		build_distance_bonus = 20
 	},	
   
