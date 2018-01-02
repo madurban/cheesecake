@@ -36,6 +36,7 @@ data:extend({
 		type = "item",
 		name = "graviton-gloves-equipment",
 		icon = "__Cheesecake__/graphics/icons/graviton-gloves.png",
+		icon_size = 32,
 		placed_as_equipment_result = "graviton-gloves-equipment",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "equipment",

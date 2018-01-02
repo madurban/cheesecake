@@ -6,6 +6,6 @@
 	"description": "Cheesecake with U-235 topping",
 	"homepage": "http://127.0.0.1",
 	"contact": "http://127.0.0.1",
-	"factorio_version":"0.15",
-	"dependencies": ["base >= 0.15.0"]
+	"factorio_version":"0.16",
+	"dependencies": ["base >= 0.16.8"]
 }
